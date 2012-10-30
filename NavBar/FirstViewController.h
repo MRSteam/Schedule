@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+<UITableViewDataSource, UITableViewDelegate>
+
+
+@property (strong,nonatomic) NSArray * list;
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
+
+int specNum;

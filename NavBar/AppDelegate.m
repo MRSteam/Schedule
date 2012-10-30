@@ -12,26 +12,78 @@
 
 #import "SecondViewController.h"
 
+#import "ThirdViewController.h"
+
+#import "FourViewController.h"
+
+#import "GroupMy.h"
+
 @implementation AppDelegate
+
+@synthesize tabBarController = _tabBarController;
+@synthesize window = _window;
+//@synthesize navController = _navController;
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
         viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil];
-    } else {
-        viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil];
-        viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil];
     }
+    
+    ThirdViewController * viewController3 = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
+    FourViewController  * viewController4 = [[FourViewController alloc] initWithNibName:@"FourViewController" bundle:nil];
+    
+    //Create our NavigationControllerObject
+    UINavigationController * nav1 = [[UINavigationController alloc]
+                                    initWithRootViewController:viewController1];
+    UINavigationController * nav2 = [[UINavigationController alloc]
+                                    initWithRootViewController:viewController2];
+    UINavigationController * nav3 = [[UINavigationController alloc]
+                                    initWithRootViewController:viewController3];
+    UINavigationController * nav4 = [[UINavigationController alloc]
+                                     initWithRootViewController:viewController4];
+    
+    UIImage *img = [ UIImage imageNamed:@"second.png"];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    imgView.image = img;
+    [self.window addSubview:imgView];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[nav2, nav1, nav3, nav4];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
+    
+   /* NSArray *listContent1 = [[NSArray alloc] initWithObjects:[GroupMy productWithType:@"iOS" name:@"IPhone"],
+                        [GroupMy productWithType:@"iOS" name:@"IPhone"],
+                        [GroupMy productWithType:@"iOS" name:@"IPhone 4S"],
+                        [GroupMy productWithType:@"iOS" name:@"iPad"],
+                        [GroupMy productWithType:@"iOS" name:@"iPod Touch"],
+                        [GroupMy productWithType:@"iOS" name:@"IPhone 4"],
+                        [GroupMy productWithType:@"iOS" name:@"IPhone 3"],
+                        [GroupMy productWithType:@"iOS" name:@"IPhone 5"],
+                        [GroupMy productWithType:@"Andriod" name:@"Samsung Galaxy Y"],
+                        [GroupMy productWithType:@"Andriod" name:@"Samsung Galaxy S2"],
+                        [GroupMy productWithType:@"Andriod" name:@"Samsung Galaxy Note"],
+                        [GroupMy productWithType:@"Andriod" name:@"Motorola RAZR"],
+                        [GroupMy productWithType:@"Andriod" name:@"Acer Liquid E"],
+                        [GroupMy productWithType:@"Windows 7" name:@"Nokia Lumia 800"],nil];
+
+    
+    
+    viewController3.listContent = listContent1;*/
+    
+
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -23,9 +23,35 @@
 		1627A95216235BFF00E7E7A5 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 1627A95116235BFF00E7E7A5 /* second.png */; };
 		1627A95416235BFF00E7E7A5 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1627A95316235BFF00E7E7A5 /* second@2x.png */; };
 		1627A95716235BFF00E7E7A5 /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1627A95516235BFF00E7E7A5 /* FirstViewController_iPhone.xib */; };
-		1627A95A16235BFF00E7E7A5 /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1627A95816235BFF00E7E7A5 /* FirstViewController_iPad.xib */; };
 		1627A95D16235BFF00E7E7A5 /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1627A95B16235BFF00E7E7A5 /* SecondViewController_iPhone.xib */; };
-		1627A96016235BFF00E7E7A5 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1627A95E16235BFF00E7E7A5 /* SecondViewController_iPad.xib */; };
+		1627A96D16235D7000E7E7A5 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627A96B16235D7000E7E7A5 /* ThirdViewController.m */; };
+		1627A97216235D7F00E7E7A5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627A97016235D7F00E7E7A5 /* DetailViewController.m */; };
+		1627A97316235D7F00E7E7A5 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1627A97116235D7F00E7E7A5 /* DetailViewController.xib */; };
+		1627A97B16236CC600E7E7A5 /* Monday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1627A97616236CC600E7E7A5 /* Monday.jpg */; };
+		1627A97C16236CC600E7E7A5 /* Thuesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1627A97716236CC600E7E7A5 /* Thuesday.jpg */; };
+		1627A97D16236CC600E7E7A5 /* Wednesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1627A97816236CC600E7E7A5 /* Wednesday.jpg */; };
+		1627A97E16236CC600E7E7A5 /* Thusday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1627A97916236CC600E7E7A5 /* Thusday.jpg */; };
+		1627A97F16236CC600E7E7A5 /* Friday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1627A97A16236CC600E7E7A5 /* Friday.jpg */; };
+		1627A98A1625290800E7E7A5 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1627A9891625290800E7E7A5 /* ThirdViewController.xib */; };
+		1627A9D016253BA700E7E7A5 /* RaspViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627A9CE16253BA700E7E7A5 /* RaspViewController.m */; };
+		1627A9D116253BA700E7E7A5 /* RaspViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1627A9CF16253BA700E7E7A5 /* RaspViewController.xib */; };
+		16C76ADE163AAB9F003277BA /* NavigationViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76ADC163AAB9F003277BA /* NavigationViewController2.m */; };
+		16C76ADF163AAB9F003277BA /* NavigationViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76ADD163AAB9F003277BA /* NavigationViewController2.xib */; };
+		16C76AE3163AAF80003277BA /* PairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76AE1163AAF80003277BA /* PairViewController.m */; };
+		16C76AE4163AAF80003277BA /* PairViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76AE2163AAF80003277BA /* PairViewController.xib */; };
+		16C76AE8163AB232003277BA /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76AE6163AB231003277BA /* DayViewController.m */; };
+		16C76AE9163AB232003277BA /* DayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76AE7163AB232003277BA /* DayViewController.xib */; };
+		16C76AF0163B2C1F003277BA /* GroupMy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76AEF163B2C1F003277BA /* GroupMy.m */; };
+		16C76AF3163B3B8E003277BA /* DayMy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76AF2163B3B8E003277BA /* DayMy.m */; };
+		16C76AF7163B4425003277BA /* stas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16C76AF6163B4425003277BA /* stas.jpg */; };
+		16C76AF9163D8C4C003277BA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C76AF8163D8C4C003277BA /* libsqlite3.dylib */; };
+		16C76B3E163ED8DE003277BA /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B3C163ED8DD003277BA /* FourViewController.m */; };
+		16C76B3F163ED8DE003277BA /* FourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76B3D163ED8DE003277BA /* FourViewController.xib */; };
+		16C76B43163EDDFF003277BA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B41163EDDFD003277BA /* SettingsViewController.m */; };
+		16C76B46163EE9E4003277BA /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76B45163EE9E4003277BA /* SettingsViewController.xib */; };
+		16C76B4A163F32DA003277BA /* PrepodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B48163F32D8003277BA /* PrepodViewController.m */; };
+		16C76B4B163F32DA003277BA /* PrepodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76B49163F32D9003277BA /* PrepodViewController.xib */; };
+		16C76B6016406148003277BA /* groupDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 16C76B5F16406147003277BA /* groupDB.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +77,46 @@
 		1627A95116235BFF00E7E7A5 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		1627A95316235BFF00E7E7A5 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		1627A95616235BFF00E7E7A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
-		1627A95916235BFF00E7E7A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
 		1627A95C16235BFF00E7E7A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
-		1627A95F16235BFF00E7E7A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
+		1627A96A16235D7000E7E7A5 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		1627A96B16235D7000E7E7A5 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		1627A96F16235D7F00E7E7A5 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		1627A97016235D7F00E7E7A5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		1627A97116235D7F00E7E7A5 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		1627A97616236CC600E7E7A5 /* Monday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Monday.jpg; path = ../../../Pictures/Monday.jpg; sourceTree = "<group>"; };
+		1627A97716236CC600E7E7A5 /* Thuesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Thuesday.jpg; path = ../../../Pictures/Thuesday.jpg; sourceTree = "<group>"; };
+		1627A97816236CC600E7E7A5 /* Wednesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Wednesday.jpg; path = ../../../Pictures/Wednesday.jpg; sourceTree = "<group>"; };
+		1627A97916236CC600E7E7A5 /* Thusday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Thusday.jpg; path = ../../../Pictures/Thusday.jpg; sourceTree = "<group>"; };
+		1627A97A16236CC600E7E7A5 /* Friday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Friday.jpg; path = ../../../Pictures/Friday.jpg; sourceTree = "<group>"; };
+		1627A9891625290800E7E7A5 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
+		1627A9CD16253BA700E7E7A5 /* RaspViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaspViewController.h; sourceTree = "<group>"; };
+		1627A9CE16253BA700E7E7A5 /* RaspViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaspViewController.m; sourceTree = "<group>"; };
+		1627A9CF16253BA700E7E7A5 /* RaspViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RaspViewController.xib; sourceTree = "<group>"; };
+		16C76ADB163AAB9F003277BA /* NavigationViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController2.h; sourceTree = "<group>"; };
+		16C76ADC163AAB9F003277BA /* NavigationViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController2.m; sourceTree = "<group>"; };
+		16C76ADD163AAB9F003277BA /* NavigationViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationViewController2.xib; sourceTree = "<group>"; };
+		16C76AE0163AAF80003277BA /* PairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairViewController.h; sourceTree = "<group>"; };
+		16C76AE1163AAF80003277BA /* PairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairViewController.m; sourceTree = "<group>"; };
+		16C76AE2163AAF80003277BA /* PairViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PairViewController.xib; sourceTree = "<group>"; };
+		16C76AE5163AB231003277BA /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
+		16C76AE6163AB231003277BA /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
+		16C76AE7163AB232003277BA /* DayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayViewController.xib; sourceTree = "<group>"; };
+		16C76AEE163B2C1F003277BA /* GroupMy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupMy.h; sourceTree = "<group>"; };
+		16C76AEF163B2C1F003277BA /* GroupMy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupMy.m; sourceTree = "<group>"; };
+		16C76AF1163B3B8E003277BA /* DayMy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayMy.h; sourceTree = "<group>"; };
+		16C76AF2163B3B8E003277BA /* DayMy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayMy.m; sourceTree = "<group>"; };
+		16C76AF6163B4425003277BA /* stas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stas.jpg; sourceTree = "<group>"; };
+		16C76AF8163D8C4C003277BA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
+		16C76B3B163ED8DD003277BA /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
+		16C76B3C163ED8DD003277BA /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
+		16C76B3D163ED8DE003277BA /* FourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourViewController.xib; sourceTree = "<group>"; };
+		16C76B40163EDDFD003277BA /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		16C76B41163EDDFD003277BA /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		16C76B45163EE9E4003277BA /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		16C76B47163F32D7003277BA /* PrepodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrepodViewController.h; sourceTree = "<group>"; };
+		16C76B48163F32D8003277BA /* PrepodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepodViewController.m; sourceTree = "<group>"; };
+		16C76B49163F32D9003277BA /* PrepodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrepodViewController.xib; sourceTree = "<group>"; };
+		16C76B5F16406147003277BA /* groupDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = groupDB.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +127,7 @@
 				1627A93016235BFF00E7E7A5 /* UIKit.framework in Frameworks */,
 				1627A93216235BFF00E7E7A5 /* Foundation.framework in Frameworks */,
 				1627A93416235BFF00E7E7A5 /* CoreGraphics.framework in Frameworks */,
+				16C76AF9163D8C4C003277BA /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,17 +168,44 @@
 				1627A93F16235BFF00E7E7A5 /* AppDelegate.m */,
 				1627A94716235BFF00E7E7A5 /* FirstViewController.h */,
 				1627A94816235BFF00E7E7A5 /* FirstViewController.m */,
+				1627A95516235BFF00E7E7A5 /* FirstViewController_iPhone.xib */,
 				1627A94A16235BFF00E7E7A5 /* first.png */,
 				1627A94C16235BFF00E7E7A5 /* first@2x.png */,
 				1627A94E16235BFF00E7E7A5 /* SecondViewController.h */,
 				1627A94F16235BFF00E7E7A5 /* SecondViewController.m */,
+				1627A95B16235BFF00E7E7A5 /* SecondViewController_iPhone.xib */,
 				1627A95116235BFF00E7E7A5 /* second.png */,
 				1627A95316235BFF00E7E7A5 /* second@2x.png */,
-				1627A95516235BFF00E7E7A5 /* FirstViewController_iPhone.xib */,
-				1627A95816235BFF00E7E7A5 /* FirstViewController_iPad.xib */,
-				1627A95B16235BFF00E7E7A5 /* SecondViewController_iPhone.xib */,
-				1627A95E16235BFF00E7E7A5 /* SecondViewController_iPad.xib */,
+				1627A96A16235D7000E7E7A5 /* ThirdViewController.h */,
+				1627A96B16235D7000E7E7A5 /* ThirdViewController.m */,
+				1627A9891625290800E7E7A5 /* ThirdViewController.xib */,
+				16C76B3B163ED8DD003277BA /* FourViewController.h */,
+				16C76B3C163ED8DD003277BA /* FourViewController.m */,
+				16C76B3D163ED8DE003277BA /* FourViewController.xib */,
+				16C76B5F16406147003277BA /* groupDB.sqlite */,
 				1627A93616235BFF00E7E7A5 /* Supporting Files */,
+				16C76B3A163ED862003277BA /* My classes */,
+				16C76B47163F32D7003277BA /* PrepodViewController.h */,
+				16C76B48163F32D8003277BA /* PrepodViewController.m */,
+				16C76B49163F32D9003277BA /* PrepodViewController.xib */,
+				16C76AE5163AB231003277BA /* DayViewController.h */,
+				16C76AE6163AB231003277BA /* DayViewController.m */,
+				16C76AE7163AB232003277BA /* DayViewController.xib */,
+				1627A9CD16253BA700E7E7A5 /* RaspViewController.h */,
+				1627A9CE16253BA700E7E7A5 /* RaspViewController.m */,
+				1627A9CF16253BA700E7E7A5 /* RaspViewController.xib */,
+				16C76ADB163AAB9F003277BA /* NavigationViewController2.h */,
+				16C76ADC163AAB9F003277BA /* NavigationViewController2.m */,
+				16C76ADD163AAB9F003277BA /* NavigationViewController2.xib */,
+				16C76AE0163AAF80003277BA /* PairViewController.h */,
+				16C76AE1163AAF80003277BA /* PairViewController.m */,
+				16C76AE2163AAF80003277BA /* PairViewController.xib */,
+				1627A96F16235D7F00E7E7A5 /* DetailViewController.h */,
+				1627A97016235D7F00E7E7A5 /* DetailViewController.m */,
+				1627A97116235D7F00E7E7A5 /* DetailViewController.xib */,
+				16C76B40163EDDFD003277BA /* SettingsViewController.h */,
+				16C76B41163EDDFD003277BA /* SettingsViewController.m */,
+				16C76B45163EE9E4003277BA /* SettingsViewController.xib */,
 			);
 			path = NavBar;
 			sourceTree = "<group>";
@@ -122,6 +213,12 @@
 		1627A93616235BFF00E7E7A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16C76AF6163B4425003277BA /* stas.jpg */,
+				1627A97616236CC600E7E7A5 /* Monday.jpg */,
+				1627A97716236CC600E7E7A5 /* Thuesday.jpg */,
+				1627A97816236CC600E7E7A5 /* Wednesday.jpg */,
+				1627A97916236CC600E7E7A5 /* Thusday.jpg */,
+				1627A97A16236CC600E7E7A5 /* Friday.jpg */,
 				1627A93716235BFF00E7E7A5 /* NavBar-Info.plist */,
 				1627A93816235BFF00E7E7A5 /* InfoPlist.strings */,
 				1627A93B16235BFF00E7E7A5 /* main.m */,
@@ -129,8 +226,20 @@
 				1627A94116235BFF00E7E7A5 /* Default.png */,
 				1627A94316235BFF00E7E7A5 /* Default@2x.png */,
 				1627A94516235BFF00E7E7A5 /* Default-568h@2x.png */,
+				16C76AF8163D8C4C003277BA /* libsqlite3.dylib */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16C76B3A163ED862003277BA /* My classes */ = {
+			isa = PBXGroup;
+			children = (
+				16C76AEE163B2C1F003277BA /* GroupMy.h */,
+				16C76AEF163B2C1F003277BA /* GroupMy.m */,
+				16C76AF1163B3B8E003277BA /* DayMy.h */,
+				16C76AF2163B3B8E003277BA /* DayMy.m */,
+			);
+			name = "My classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,9 +302,23 @@
 				1627A95216235BFF00E7E7A5 /* second.png in Resources */,
 				1627A95416235BFF00E7E7A5 /* second@2x.png in Resources */,
 				1627A95716235BFF00E7E7A5 /* FirstViewController_iPhone.xib in Resources */,
-				1627A95A16235BFF00E7E7A5 /* FirstViewController_iPad.xib in Resources */,
 				1627A95D16235BFF00E7E7A5 /* SecondViewController_iPhone.xib in Resources */,
-				1627A96016235BFF00E7E7A5 /* SecondViewController_iPad.xib in Resources */,
+				1627A97316235D7F00E7E7A5 /* DetailViewController.xib in Resources */,
+				1627A97B16236CC600E7E7A5 /* Monday.jpg in Resources */,
+				1627A97C16236CC600E7E7A5 /* Thuesday.jpg in Resources */,
+				1627A97D16236CC600E7E7A5 /* Wednesday.jpg in Resources */,
+				1627A97E16236CC600E7E7A5 /* Thusday.jpg in Resources */,
+				1627A97F16236CC600E7E7A5 /* Friday.jpg in Resources */,
+				1627A98A1625290800E7E7A5 /* ThirdViewController.xib in Resources */,
+				1627A9D116253BA700E7E7A5 /* RaspViewController.xib in Resources */,
+				16C76ADF163AAB9F003277BA /* NavigationViewController2.xib in Resources */,
+				16C76AE4163AAF80003277BA /* PairViewController.xib in Resources */,
+				16C76AE9163AB232003277BA /* DayViewController.xib in Resources */,
+				16C76AF7163B4425003277BA /* stas.jpg in Resources */,
+				16C76B3F163ED8DE003277BA /* FourViewController.xib in Resources */,
+				16C76B46163EE9E4003277BA /* SettingsViewController.xib in Resources */,
+				16C76B4B163F32DA003277BA /* PrepodViewController.xib in Resources */,
+				16C76B6016406148003277BA /* groupDB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +333,17 @@
 				1627A94016235BFF00E7E7A5 /* AppDelegate.m in Sources */,
 				1627A94916235BFF00E7E7A5 /* FirstViewController.m in Sources */,
 				1627A95016235BFF00E7E7A5 /* SecondViewController.m in Sources */,
+				1627A96D16235D7000E7E7A5 /* ThirdViewController.m in Sources */,
+				1627A97216235D7F00E7E7A5 /* DetailViewController.m in Sources */,
+				1627A9D016253BA700E7E7A5 /* RaspViewController.m in Sources */,
+				16C76ADE163AAB9F003277BA /* NavigationViewController2.m in Sources */,
+				16C76AE3163AAF80003277BA /* PairViewController.m in Sources */,
+				16C76AE8163AB232003277BA /* DayViewController.m in Sources */,
+				16C76AF0163B2C1F003277BA /* GroupMy.m in Sources */,
+				16C76AF3163B3B8E003277BA /* DayMy.m in Sources */,
+				16C76B3E163ED8DE003277BA /* FourViewController.m in Sources */,
+				16C76B43163EDDFF003277BA /* SettingsViewController.m in Sources */,
+				16C76B4A163F32DA003277BA /* PrepodViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,28 +366,12 @@
 			name = FirstViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		1627A95816235BFF00E7E7A5 /* FirstViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1627A95916235BFF00E7E7A5 /* en */,
-			);
-			name = FirstViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
 		1627A95B16235BFF00E7E7A5 /* SecondViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1627A95C16235BFF00E7E7A5 /* en */,
 			);
 			name = SecondViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		1627A95E16235BFF00E7E7A5 /* SecondViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1627A95F16235BFF00E7E7A5 /* en */,
-			);
-			name = SecondViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -270,6 +388,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -299,6 +418,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -317,7 +437,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NavBar/NavBar-Prefix.pch";
 				INFOPLIST_FILE = "NavBar/NavBar-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NavBar\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -328,7 +453,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NavBar/NavBar-Prefix.pch";
 				INFOPLIST_FILE = "NavBar/NavBar-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NavBar\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -352,6 +482,7 @@
 				1627A96516235BFF00E7E7A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
