@@ -52,6 +52,7 @@
 		16C76B4A163F32DA003277BA /* PrepodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B48163F32D8003277BA /* PrepodViewController.m */; };
 		16C76B4B163F32DA003277BA /* PrepodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76B49163F32D9003277BA /* PrepodViewController.xib */; };
 		16C76B6016406148003277BA /* groupDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 16C76B5F16406147003277BA /* groupDB.sqlite */; };
+		16C76B631640E997003277BA /* myAccessorValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B621640E997003277BA /* myAccessorValues.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,8 @@
 		16C76B48163F32D8003277BA /* PrepodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepodViewController.m; sourceTree = "<group>"; };
 		16C76B49163F32D9003277BA /* PrepodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrepodViewController.xib; sourceTree = "<group>"; };
 		16C76B5F16406147003277BA /* groupDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = groupDB.sqlite; sourceTree = "<group>"; };
+		16C76B611640E996003277BA /* myAccessorValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myAccessorValues.h; sourceTree = "<group>"; };
+		16C76B621640E997003277BA /* myAccessorValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myAccessorValues.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,8 @@
 				16C76AEF163B2C1F003277BA /* GroupMy.m */,
 				16C76AF1163B3B8E003277BA /* DayMy.h */,
 				16C76AF2163B3B8E003277BA /* DayMy.m */,
+				16C76B611640E996003277BA /* myAccessorValues.h */,
+				16C76B621640E997003277BA /* myAccessorValues.m */,
 			);
 			name = "My classes";
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				16C76B3E163ED8DE003277BA /* FourViewController.m in Sources */,
 				16C76B43163EDDFF003277BA /* SettingsViewController.m in Sources */,
 				16C76B4A163F32DA003277BA /* PrepodViewController.m in Sources */,
+				16C76B631640E997003277BA /* myAccessorValues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

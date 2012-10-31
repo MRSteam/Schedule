@@ -14,6 +14,7 @@
 #import "PairViewController.h"
 #import "RaspViewController.h"
 #import "ThirdViewController.h"
+#import "myAccessorValues.h"
 
 @interface DayViewController ()
 {
@@ -22,7 +23,15 @@
 
 @end
 
+
+
 @implementation DayViewController
+
+static NSString* myVar;
+
++(NSString*)myVarAccessor {
+    return myVar;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -175,13 +184,22 @@
 
     DayMy *cell = nil;
     cell = [totalStrings objectAtIndex:indexPath.row];
+
+    [myAccessorValues myPairNameSetter:cell.para];
+    [myAccessorValues myPairTimeSetter:cell.ptime];
+    [myAccessorValues myAuditNameSetter:cell.aud];
+    [myAccessorValues myPairPrepodSetter:cell.prepod];
+    [myAccessorValues myDayNameSetter:cell.day];
+    [myAccessorValues myPairImgSetter:[UIImage imageNamed:@"stas.jpg"]];
+    
+   /*
     myPairName = cell.para;
     myPairTime = cell.ptime;
     myAuditName = cell.aud;
     myPairPrepod = cell.prepod;
     myDayName = cell.day;
     myPairImg = [UIImage imageNamed:@"stas.jpg"];
-    
+    */
     //create a DetailViewController object
     PairViewController *DVC = [[PairViewController alloc] initWithNibName:@"PairViewController" bundle:nil];
     

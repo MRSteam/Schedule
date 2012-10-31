@@ -12,6 +12,7 @@
 
 @implementation FirstViewController
 
+
 @synthesize list = _list;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

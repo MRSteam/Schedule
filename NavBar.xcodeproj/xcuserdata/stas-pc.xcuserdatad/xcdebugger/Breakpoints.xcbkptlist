@@ -71,11 +71,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NavBar/DayViewController.m"
-         timestampString = "373239214.099266"
+         timestampString = "373354810.209335"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "168"
-         endingLineNumber = "168"
+         startingLineNumber = "177"
+         endingLineNumber = "177"
          landmarkName = "-numberOfSectionsInTableView:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -84,12 +84,142 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NavBar/PrepodViewController.m"
-         timestampString = "373276603.232965"
+         timestampString = "373354810.209335"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "63"
-         endingLineNumber = "63"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
          landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/myAccessorValues.m"
+         timestampString = "373354810.209335"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
+         landmarkName = "@implementation myAccessorValues"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/FourViewController.m"
+         timestampString = "373392960.11131"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "110"
+         endingLineNumber = "110"
+         landmarkName = "-searchBar:textDidChange:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/FourViewController.m"
+         timestampString = "373395326.454868"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
+         landmarkName = "-searchBar:textDidChange:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/FourViewController.m"
+         timestampString = "373392960.11131"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "112"
+         endingLineNumber = "112"
+         landmarkName = "-searchBar:textDidChange:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/FourViewController.m"
+         timestampString = "373392268.010622"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "108"
+         endingLineNumber = "108"
+         landmarkName = "-searchBar:textDidChange:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/FourViewController.m"
+         timestampString = "373392339.285532"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "107"
+         endingLineNumber = "107"
+         landmarkName = "-searchBar:textDidChange:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/ThirdViewController.m"
+         timestampString = "373393709.504988"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "148"
+         endingLineNumber = "148"
+         landmarkName = "-searchBar:textDidChange:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/ThirdViewController.m"
+         timestampString = "373393711.367222"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "152"
+         endingLineNumber = "152"
+         landmarkName = "-searchBar:textDidChange:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/ThirdViewController.m"
+         timestampString = "373394847.607396"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "180"
+         endingLineNumber = "180"
+         landmarkName = "-searchBar:textDidChange:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "NavBar/ThirdViewController.m"
+         timestampString = "373395126.772029"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "258"
+         endingLineNumber = "258"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

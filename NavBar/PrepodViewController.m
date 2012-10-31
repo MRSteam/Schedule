@@ -12,6 +12,7 @@
 #import "FourViewController.h"
 #import "DayViewController.h"
 #import "PairViewController.h"
+#import "myAccessorValues.h"
 
 @interface PrepodViewController ()
 {
@@ -158,12 +159,12 @@
     
     DayMy *cell = nil;
     cell = [totalStrings objectAtIndex:indexPath.row];
-    myPairName = cell.para;
-    myPairTime = cell.ptime;
-    myAuditName = cell.aud;
-    myPairPrepod = cell.prepod;
-    myDayName = cell.day;
-    myPairImg = [UIImage imageNamed:@"stas.jpg"];
+    [myAccessorValues myPairNameSetter:cell.para];
+    [myAccessorValues myPairTimeSetter:cell.ptime];
+    [myAccessorValues myAuditNameSetter:cell.aud];
+    [myAccessorValues myPairPrepodSetter:cell.prepod];
+    [myAccessorValues myDayNameSetter:cell.day];
+    [myAccessorValues myPairImgSetter:[UIImage imageNamed:@"stas.jpg"]];
     
     //create a DetailViewController object
     PairViewController *DVC = [[PairViewController alloc] initWithNibName:@"PairViewController" bundle:nil];

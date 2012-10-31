@@ -10,6 +10,7 @@
 #import "NavigationViewController2.h"
 #import "DayViewController.h"
 #import "RaspViewController.h"
+#import "myAccessorValues.h"
 
 @interface PairViewController ()
 
@@ -24,8 +25,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        NSString *stringWithInteger = [NSString stringWithFormat: myPairName];
-        self.title = stringWithInteger;
+        //NSString *stringWithInteger = [NSString stringWithFormat: [myAccessorValues myPairNameAccessor]];
+        self.title = [myAccessorValues myPairNameAccessor];
     }
     return self;
 }
@@ -34,13 +35,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    self.myLabelPair.text = myPairName;
-    self.myLabelTime.text = myPairTime;
-    self.myLabelDay.text = myDayName;
-    self.myLabelAudit.text = myAuditName;
-    self.myLabelPrepod.text=myPairPrepod;
-    self.myImage.image = myPairImg;
+
+    self.myLabelPair.text = [myAccessorValues myPairNameAccessor];
+    self.myLabelTime.text = [myAccessorValues myPairTimeAccessor];
+    self.myLabelDay.text = [myAccessorValues myDayNameAccessor];
+    self.myLabelAudit.text = [myAccessorValues myAuditNameAccessor];
+    self.myLabelPrepod.text=[myAccessorValues myPairPrepodAccessor];
+    self.myImage.image = [myAccessorValues myPairImgAccessor];
 }
 
 - (void)didReceiveMemoryWarning

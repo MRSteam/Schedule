@@ -13,16 +13,11 @@
 {
     sqlite3 *groupDB;
     NSString *databasePath;
+    
 }
 
-
++(NSString*)myVarAccessor;
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
 
-NSString *myPairName;
-NSString *myPairTime;
-NSString *myAuditName;
-NSString *myPairPrepod;
-NSString *myDayName;
-UIImage *myPairImg;

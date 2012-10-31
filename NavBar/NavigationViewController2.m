@@ -12,6 +12,7 @@
 #import "PairViewController.h"
 #import "DayMy.h"
 #import "DayViewController.h"
+#import "myAccessorValues.h"
 
 @interface NavigationViewController2 ()
 {
@@ -134,11 +135,16 @@
         isFiltered = YES;
         filteredStrings = [[NSMutableArray alloc]init];
         
-        for (NSString *str in totalStrings) {
-            NSRange stringRange = [str rangeOfString:searchText options:NSCaseInsensitiveSearch];
+        NSString *str;
+        
+        for (int i=0; i<[totalStrings count]; i++) {
+            DayMy *value = [totalStrings objectAtIndex:i];
+            str = value.para;
             
-            if (stringRange.location != NSNotFound) {
-                [filteredStrings addObject:str];
+            NSRange stringRange1 = [str rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            
+            if (stringRange1.location != NSNotFound) {
+                [filteredStrings addObject:value];
             }
         }
     }
@@ -194,12 +200,13 @@
 {
     DayMy *cell = nil;
     cell = [totalStrings objectAtIndex:indexPath.row];
-    myPairName = cell.para;
-    myPairTime = cell.ptime;
-    myAuditName = cell.aud;
-    myPairPrepod = cell.prepod;
-    myDayName = cell.day;
-    myPairImg = [UIImage imageNamed:@"stas.jpg"];
+
+    [myAccessorValues myPairNameSetter:cell.para];
+    [myAccessorValues myPairTimeSetter:cell.ptime];
+    [myAccessorValues myAuditNameSetter:cell.aud];
+    [myAccessorValues myPairPrepodSetter:cell.prepod];
+    [myAccessorValues myDayNameSetter:cell.day];
+    [myAccessorValues myPairImgSetter:[UIImage imageNamed:@"stas.jpg"]];
     
     //create a DetailViewController object
     PairViewController *DVC = [[PairViewController alloc] initWithNibName:@"PairViewController" bundle:nil];

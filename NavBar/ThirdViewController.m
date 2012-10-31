@@ -138,18 +138,44 @@
         isFiltered = YES;
         filteredStrings = [[NSMutableArray alloc]init];
         
-        for (GroupMy *str in totalStrings) {
-            NSRange stringRange1 = [str.number rangeOfString:searchText options:NSCaseInsensitiveSearch];
-            
-            if (stringRange1.location != NSNotFound) {
-                [filteredStrings addObject:str];
-            }
-            NSRange stringRange2 = [str.kafedra rangeOfString:searchText options:NSCaseInsensitiveSearch];
-            
-            if (stringRange2.location != NSNotFound) {
-                [filteredStrings addObject:str];
+        NSString *str1, *str2;
+        
+
+
+        NSMutableArray *filteredStringsInArray = [[NSMutableArray alloc] init];
+        
+        
+        for (int k=0; k<=3; k++)
+        {
+            NSDictionary *dictionary1 = [totalStrings objectAtIndex:k];
+            NSArray *array1 = [dictionary1 objectForKey:@"Data"];
+            for (int i=0; i<[array1 count]; i++) {
+                GroupMy *myPer = [array1 objectAtIndex:i];
+                str1 = myPer.number;
+                str2 = myPer.kafedra;
+                
+                GroupMy *value = [array1 objectAtIndex:i];
+                
+                NSRange stringRange1 = [str1 rangeOfString:searchText options:NSCaseInsensitiveSearch];
+                
+                if (stringRange1.location != NSNotFound) {
+                    //[filteredStringsInArray addObject:value];
+                    
+                    [filteredStrings addObject:value];
+                    //NSLog(@"%@ - %@ - %@ - %d",searchText, str1, value.number, [filteredStrings count]);
+                }
+                NSRange stringRange2 = [str2 rangeOfString:searchText options:NSCaseInsensitiveSearch];
+                
+                if (stringRange2.location != NSNotFound) {
+                    //[filteredStringsInArray addObject:value];
+                    
+                    [filteredStrings addObject:value];
+                    //NSLog(@"%@ - %@ - %@ - %d",searchText, str1, value.number, [filteredStrings count]);
+                }
             }
         }
+        //NSDictionary *courseFilteredStrings = [NSDictionary dictionaryWithObject:filteredStringsInArray forKey:@"Data"];
+        //[filteredStrings addObject:courseFilteredStrings];
     }
     [self.myTableView reloadData];
 }
@@ -168,14 +194,9 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSDictionary *dictionary = [totalStrings objectAtIndex:section];
-    NSArray *array = [dictionary objectForKey:@"Data"];
-    return [array count];
-    
     if (isFiltered) {
-        NSDictionary *dictionary = [filteredStrings objectAtIndex:section];
-        NSArray *array = [dictionary objectForKey:@"Data"];
-        return [array count];
+     //   NSLog(@"!!! %d",[filteredStrings count]);
+        return [filteredStrings count];
     }
     else
     {
@@ -209,8 +230,9 @@
 
     NSDictionary *dictionary1 = [totalStrings objectAtIndex:indexPath.section];
     NSArray *array1 = [dictionary1 objectForKey:@"Data"];
-    NSDictionary *dictionary2 = [filteredStrings objectAtIndex:indexPath.section];
-    NSArray *array2 = [dictionary2 objectForKey:@"Data"];
+    //NSDictionary *dictionary2 = [filteredStrings objectAtIndex:indexPath.section];
+    //NSArray *array2 = [dictionary2 objectForKey:@"Data"];
+    
     //NSString *cellValue = [array objectAtIndex:indexPath.row];
     //cell.text = cellValue;
     
@@ -223,20 +245,21 @@
     {
         //cell.textLabel.text = [totalStrings objectAtIndex:indexPath.row];
         GroupMy *cellValue1 = [array1 objectAtIndex:indexPath.row];
-        GroupMy *cellValue2 = [array1 objectAtIndex:indexPath.row];
+        //GroupMy *cellValue2 = [array1 objectAtIndex:indexPath.row];
         
         
         lblTemp1.text= cellValue1.number;
-        lblTemp2.text = cellValue2.kafedra;
+        lblTemp2.text = cellValue1.kafedra;
     }
     else
     {
         //cell.textLabel.text = [filteredStrings objectAtIndex:indexPath.row];
-        GroupMy *cellValue1 = [array2 objectAtIndex:indexPath.row];
-        GroupMy *cellValue2 = [array2 objectAtIndex:indexPath.row];
+        //NSLog(@"%d",indexPath.row);
+        GroupMy *cellValue1 = [filteredStrings objectAtIndex:indexPath.row];
+        //GroupMy *cellValue2 = [filteredStrings objectAtIndex:indexPath.row];
         
         lblTemp1.text = cellValue1.number;
-        lblTemp2.text = cellValue2.kafedra;
+        lblTemp2.text = cellValue1.kafedra;
     }
 
     return cell;
@@ -282,7 +305,10 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    if (!isFiltered)
+        return 3;
+    else
+        return 1;
 }
 
 
@@ -291,8 +317,6 @@
 {
     NSDictionary *dictionary1 = [totalStrings objectAtIndex:indexPath.section];
     NSArray *array1 = [dictionary1 objectForKey:@"Data"];
-    NSDictionary *dictionary2 = [filteredStrings objectAtIndex:indexPath.section];
-    NSArray *array2 = [dictionary2 objectForKey:@"Data"];
 
     courseNumber = indexPath.row+1;
     GroupMy *cell = nil;
@@ -302,7 +326,7 @@
     }
     else
     {
-        cell = [array2 objectAtIndex:indexPath.row];
+        cell = [filteredStrings objectAtIndex:indexPath.row];
     }
     courseName = cell.number;
     

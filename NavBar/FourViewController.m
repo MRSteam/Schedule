@@ -103,11 +103,16 @@
         isFiltered = YES;
         filteredStrings = [[NSMutableArray alloc]init];
         
-        for (NSString *str in totalStrings) {
+        NSString *str;
+        
+        for (int i=0; i<[totalStrings count]; i++) {
+            DayMy *value = [totalStrings objectAtIndex:i];
+            str = value.prepod;
+           
             NSRange stringRange1 = [str rangeOfString:searchText options:NSCaseInsensitiveSearch];
             
             if (stringRange1.location != NSNotFound) {
-                [filteredStrings addObject:str];
+                [filteredStrings addObject:value];
             }
         }
     }
@@ -161,7 +166,7 @@
     }
     else
     {
-        DayMy *cellValue1 = [totalStrings objectAtIndex:indexPath.row];
+        DayMy *cellValue1 = [filteredStrings objectAtIndex:indexPath.row];
         cell.textLabel.text = cellValue1.prepod;
     }
     
