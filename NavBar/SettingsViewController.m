@@ -8,13 +8,14 @@
 
 #include <sqlite3.h>
 #import "SettingsViewController.h"
+#import "MyCLController.h"
 
 @interface SettingsViewController ()
 
 @end
 
 @implementation SettingsViewController
-@synthesize yourGroupNumber ,myGeoLocation, myLabelTimer, myRemember, myLabelRemember;
+@synthesize yourGroupNumber ,myGeoLocation, myLabelTimer, myRemember, myLabelRemember, locationLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +29,10 @@
 
 - (void)viewDidLoad
 {
-
+    locationController = [[MyCLController alloc] init];
+    locationController.delegate = self;
+    [locationController.locationManager startUpdatingLocation];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
    
@@ -66,6 +70,15 @@
     
     
 }
+
+- (void)locationUpdate:(CLLocation *)location {
+    locationLabel.text = [location description];
+}
+
+- (void)locationError:(NSError *)error {
+    locationLabel.text = [error description];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -107,10 +120,14 @@
 }
 
 - (IBAction)doGeoLocation:(id)sender {
-    if (myGeoLocation.on)
+    if (myGeoLocation.on) {
         NSLog(@"GEO ON");
-    else
+        [locationController.locationManager startUpdatingLocation];
+        }
+    else {
         NSLog(@"GEO OFF");
+        [locationController.locationManager stopUpdatingLocation];
+    }
 }
 
 - (IBAction)doRemember:(id)sender {
@@ -127,4 +144,12 @@
         myLabelTimer.hidden=YES;
     }
 }
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [yourGroupNumber resignFirstResponder];
+    [myLabelTimer resignFirstResponder];
+    return YES;
+}
+
+
 @end

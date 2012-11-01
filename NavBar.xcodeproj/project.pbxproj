@@ -53,6 +53,8 @@
 		16C76B4B163F32DA003277BA /* PrepodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76B49163F32D9003277BA /* PrepodViewController.xib */; };
 		16C76B6016406148003277BA /* groupDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 16C76B5F16406147003277BA /* groupDB.sqlite */; };
 		16C76B631640E997003277BA /* myAccessorValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B621640E997003277BA /* myAccessorValues.m */; };
+		16C76B731641A9CA003277BA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C76B721641A9CA003277BA /* CoreLocation.framework */; };
+		16C76B761641AA2A003277BA /* MyCLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B751641AA2A003277BA /* MyCLController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +122,9 @@
 		16C76B5F16406147003277BA /* groupDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = groupDB.sqlite; sourceTree = "<group>"; };
 		16C76B611640E996003277BA /* myAccessorValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myAccessorValues.h; sourceTree = "<group>"; };
 		16C76B621640E997003277BA /* myAccessorValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myAccessorValues.m; sourceTree = "<group>"; };
+		16C76B721641A9CA003277BA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		16C76B741641AA2A003277BA /* MyCLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCLController.h; sourceTree = "<group>"; };
+		16C76B751641AA2A003277BA /* MyCLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCLController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C76B731641A9CA003277BA /* CoreLocation.framework in Frameworks */,
 				1627A93016235BFF00E7E7A5 /* UIKit.framework in Frameworks */,
 				1627A93216235BFF00E7E7A5 /* Foundation.framework in Frameworks */,
 				1627A93416235BFF00E7E7A5 /* CoreGraphics.framework in Frameworks */,
@@ -140,8 +146,9 @@
 		1627A92016235BFE00E7E7A5 = {
 			isa = PBXGroup;
 			children = (
+				16C76B721641A9CA003277BA /* CoreLocation.framework */,
 				1627A93516235BFF00E7E7A5 /* NavBar */,
-				1627A92E16235BFF00E7E7A5 /* Frameworks */,
+				16C76B701641A7AF003277BA /* New Group */,
 				1627A92C16235BFF00E7E7A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -169,6 +176,8 @@
 			children = (
 				1627A93E16235BFF00E7E7A5 /* AppDelegate.h */,
 				1627A93F16235BFF00E7E7A5 /* AppDelegate.m */,
+				16C76B741641AA2A003277BA /* MyCLController.h */,
+				16C76B751641AA2A003277BA /* MyCLController.m */,
 				1627A94716235BFF00E7E7A5 /* FirstViewController.h */,
 				1627A94816235BFF00E7E7A5 /* FirstViewController.m */,
 				1627A95516235BFF00E7E7A5 /* FirstViewController_iPhone.xib */,
@@ -245,6 +254,14 @@
 				16C76B621640E997003277BA /* myAccessorValues.m */,
 			);
 			name = "My classes";
+			sourceTree = "<group>";
+		};
+		16C76B701641A7AF003277BA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				1627A92E16235BFF00E7E7A5 /* Frameworks */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +367,7 @@
 				16C76B43163EDDFF003277BA /* SettingsViewController.m in Sources */,
 				16C76B4A163F32DA003277BA /* PrepodViewController.m in Sources */,
 				16C76B631640E997003277BA /* myAccessorValues.m in Sources */,
+				16C76B761641AA2A003277BA /* MyCLController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
