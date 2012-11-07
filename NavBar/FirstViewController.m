@@ -85,6 +85,7 @@
     [self.myTableView deselectRowAtIndexPath:selectedIndexPath animated:NO];
     
     [self.myTableView reloadData];
+    ///попробовать сунуть выше
 }
 
 

@@ -10,12 +10,15 @@
 #import "SettingsViewController.h"
 #import "MyCLController.h"
 
+#import "DisplayData.h"
+
 @interface SettingsViewController ()
 
 @end
 
 @implementation SettingsViewController
 @synthesize yourGroupNumber ,myGeoLocation, myLabelTimer, myRemember, myLabelRemember, locationLabel;
+@synthesize button;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +35,8 @@
     locationController = [[MyCLController alloc] init];
     locationController.delegate = self;
     [locationController.locationManager startUpdatingLocation];
+    
+    
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -73,12 +78,12 @@
 
 - (void)locationUpdate:(CLLocation *)location {
     locationLabel.text = [location description];
+    //NSLog(@"%f %f",location.coordinate.latitude,location.coordinate.longitude);
 }
 
 - (void)locationError:(NSError *)error {
     locationLabel.text = [error description];
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -151,5 +156,30 @@
     return YES;
 }
 
+-(IBAction)displayData:(id)sender
+{
+    /*
+     displayData = [[DisplayData alloc]
+                   initWithNibName:@"DisplayData"
+                   bundle:nil];
+    [self.view addSubview:displayData.view];
+    */
+    DisplayData *DVC = [[DisplayData alloc] initWithNibName:@"DisplayData" bundle:nil];
+    [self.navigationController pushViewController:DVC animated:YES];
+}
+
+#pragma mark – View lifecycle
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
 
 @end

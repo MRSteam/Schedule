@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @interface myAccessorValues : NSObject
 /*{
     NSString *myPairName;
@@ -31,8 +30,14 @@
 +(void)myDayNameSetter:(NSString *)_myDayName;
 +(void)myPairImgSetter:(UIImage *)_myPairImg;
 
-//@property (nonatomic, copy) NSString *myPairName, *myPairTime, *myAuditName, *myPairPrepod, *myDayName, *myPairImg;
+//@property (nonatomic, strong) NSString *myPairName, *myPairTime, *myAuditName, *myPairPrepod, *myDayName, *myPairImg;
 
 //- (void)myPairNameSet:(NSString *)myPairName;
 
+typedef enum {first = 10, second = 20, third = 30} EnumName;
+
 @end
+
+
+//если не писать свои сеттеры и геттеры то придется передавать объект нашего класса, а так передавать ничего не надо
+

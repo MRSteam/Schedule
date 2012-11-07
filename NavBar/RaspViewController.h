@@ -17,4 +17,4 @@
 @end
 
 NSString *myDayName;
-int *myDayNumber;
+int myDayNumber;

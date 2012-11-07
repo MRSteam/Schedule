@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1626A95A1646EA7400C3FA63 /* Venues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1626A9591646EA7400C3FA63 /* Venues.m */; };
 		1627A93016235BFF00E7E7A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1627A92F16235BFF00E7E7A5 /* UIKit.framework */; };
 		1627A93216235BFF00E7E7A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1627A93116235BFF00E7E7A5 /* Foundation.framework */; };
 		1627A93416235BFF00E7E7A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1627A93316235BFF00E7E7A5 /* CoreGraphics.framework */; };
@@ -55,9 +56,17 @@
 		16C76B631640E997003277BA /* myAccessorValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B621640E997003277BA /* myAccessorValues.m */; };
 		16C76B731641A9CA003277BA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C76B721641A9CA003277BA /* CoreLocation.framework */; };
 		16C76B761641AA2A003277BA /* MyCLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B751641AA2A003277BA /* MyCLController.m */; };
+		16C76B7D1642EB81003277BA /* DisplayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76B7B1642EB7F003277BA /* DisplayData.m */; };
+		16C76B7E1642EB81003277BA /* DisplayData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76B7C1642EB7F003277BA /* DisplayData.xib */; };
+		16E5A2BD164847CA006CDEE3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E5A2BB164847CA006CDEE3 /* MapViewController.m */; };
+		16E5A2BE164847CA006CDEE3 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E5A2BC164847CA006CDEE3 /* MapViewController.xib */; };
+		16E5A2C01648486A006CDEE3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E5A2BF1648486A006CDEE3 /* MapKit.framework */; };
+		16E5A2C316485238006CDEE3 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E5A2C216485238006CDEE3 /* MapPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1626A9581646EA7400C3FA63 /* Venues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venues.h; sourceTree = "<group>"; };
+		1626A9591646EA7400C3FA63 /* Venues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venues.m; sourceTree = "<group>"; };
 		1627A92B16235BFF00E7E7A5 /* NavBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1627A92F16235BFF00E7E7A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1627A93116235BFF00E7E7A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,6 +134,15 @@
 		16C76B721641A9CA003277BA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		16C76B741641AA2A003277BA /* MyCLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCLController.h; sourceTree = "<group>"; };
 		16C76B751641AA2A003277BA /* MyCLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCLController.m; sourceTree = "<group>"; };
+		16C76B7A1642EB7E003277BA /* DisplayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayData.h; sourceTree = "<group>"; };
+		16C76B7B1642EB7F003277BA /* DisplayData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayData.m; sourceTree = "<group>"; };
+		16C76B7C1642EB7F003277BA /* DisplayData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayData.xib; sourceTree = "<group>"; };
+		16E5A2BA164847CA006CDEE3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		16E5A2BB164847CA006CDEE3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		16E5A2BC164847CA006CDEE3 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		16E5A2BF1648486A006CDEE3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		16E5A2C116485238006CDEE3 /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		16E5A2C216485238006CDEE3 /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E5A2C01648486A006CDEE3 /* MapKit.framework in Frameworks */,
 				16C76B731641A9CA003277BA /* CoreLocation.framework in Frameworks */,
 				1627A93016235BFF00E7E7A5 /* UIKit.framework in Frameworks */,
 				1627A93216235BFF00E7E7A5 /* Foundation.framework in Frameworks */,
@@ -146,6 +165,7 @@
 		1627A92016235BFE00E7E7A5 = {
 			isa = PBXGroup;
 			children = (
+				16E5A2BF1648486A006CDEE3 /* MapKit.framework */,
 				16C76B721641A9CA003277BA /* CoreLocation.framework */,
 				1627A93516235BFF00E7E7A5 /* NavBar */,
 				16C76B701641A7AF003277BA /* New Group */,
@@ -176,8 +196,18 @@
 			children = (
 				1627A93E16235BFF00E7E7A5 /* AppDelegate.h */,
 				1627A93F16235BFF00E7E7A5 /* AppDelegate.m */,
+				16E5A2C116485238006CDEE3 /* MapPoint.h */,
+				16E5A2C216485238006CDEE3 /* MapPoint.m */,
+				1626A9581646EA7400C3FA63 /* Venues.h */,
+				1626A9591646EA7400C3FA63 /* Venues.m */,
 				16C76B741641AA2A003277BA /* MyCLController.h */,
 				16C76B751641AA2A003277BA /* MyCLController.m */,
+				16C76B7A1642EB7E003277BA /* DisplayData.h */,
+				16C76B7B1642EB7F003277BA /* DisplayData.m */,
+				16C76B7C1642EB7F003277BA /* DisplayData.xib */,
+				16E5A2BA164847CA006CDEE3 /* MapViewController.h */,
+				16E5A2BB164847CA006CDEE3 /* MapViewController.m */,
+				16E5A2BC164847CA006CDEE3 /* MapViewController.xib */,
 				1627A94716235BFF00E7E7A5 /* FirstViewController.h */,
 				1627A94816235BFF00E7E7A5 /* FirstViewController.m */,
 				1627A95516235BFF00E7E7A5 /* FirstViewController_iPhone.xib */,
@@ -341,6 +371,8 @@
 				16C76B46163EE9E4003277BA /* SettingsViewController.xib in Resources */,
 				16C76B4B163F32DA003277BA /* PrepodViewController.xib in Resources */,
 				16C76B6016406148003277BA /* groupDB.sqlite in Resources */,
+				16C76B7E1642EB81003277BA /* DisplayData.xib in Resources */,
+				16E5A2BE164847CA006CDEE3 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +400,10 @@
 				16C76B4A163F32DA003277BA /* PrepodViewController.m in Sources */,
 				16C76B631640E997003277BA /* myAccessorValues.m in Sources */,
 				16C76B761641AA2A003277BA /* MyCLController.m in Sources */,
+				16C76B7D1642EB81003277BA /* DisplayData.m in Sources */,
+				1626A95A1646EA7400C3FA63 /* Venues.m in Sources */,
+				16E5A2BD164847CA006CDEE3 /* MapViewController.m in Sources */,
+				16E5A2C316485238006CDEE3 /* MapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

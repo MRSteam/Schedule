@@ -197,6 +197,7 @@ int groupMy = 0;
                         return [first compare:second];
                     }];
                     totalStrings = sortedArray;
+                    
                 }
             }
             sqlite3_finalize(statement);
