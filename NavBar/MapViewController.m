@@ -7,6 +7,9 @@
 //
 
 #import "MapViewController.h"
+#import "DisplayData.h"
+#import "myAccessorValues.h"
+#import "Venues.h"
 
 @interface MapViewController ()
 
@@ -41,6 +44,38 @@
     [self.view addSubview:loadIndicator];
 }
 
+-(void)plotPositions2:(NSArray *)data {
+    // 1 - Remove any existing custom annotations but not the user location blue dot.
+    for (id<MKAnnotation> annotation in self.mapView.annotations) {
+        if ([annotation isKindOfClass:[MapPoint class]]) {
+            [self.mapView removeAnnotation:annotation];
+        }
+    }
+    
+    
+
+    
+    // 2 - Loop through the array of places returned from the Google API.
+    for (int i=0; i<[data count]; i++) {
+        //Retrieve the NSDictionary object in each index of the array.
+        NSDictionary* place = [data objectAtIndex:i];
+        // 3 - There is a specific NSDictionary object that gives us the location info.
+        NSDictionary *geo = [place objectForKey:@"geometry"];
+        // Get the lat and long for the location.
+        NSDictionary *loc = [geo objectForKey:@"location"];
+        // 4 - Get your name and address info for adding to a pin.
+        NSString *name=[place objectForKey:@"name"];
+        NSString *vicinity=[place objectForKey:@"vicinity"];
+        // Create a special variable to hold this coordinate info.
+        CLLocationCoordinate2D placeCoord;
+        // Set the lat and long.
+        placeCoord.latitude=[[loc objectForKey:@"lat"] doubleValue];
+        placeCoord.longitude=[[loc objectForKey:@"lng"] doubleValue];
+        // 5 - Create a new annotation.
+        MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
+        [self.mapView addAnnotation:placeObject];
+    }
+}
 
 - (void)viewDidLoad
 {
@@ -68,6 +103,15 @@
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
     [loadIndicator removeFromSuperview ];
+    
+    NSArray *finisharray =  nil;
+    finisharray = [myAccessorValues myFinishArrayAccessor];
+    Venues *myFoo = [finisharray objectAtIndex:0];
+    CLLocationCoordinate2D placeCoord;
+    placeCoord.latitude=[myFoo.lat doubleValue];
+    placeCoord.longitude=[myFoo.lng doubleValue];
+    MapPoint *placeObject = [[MapPoint alloc] initWithName:myFoo.name address:myFoo.name coordinate:placeCoord];
+    [self.mapView addAnnotation:placeObject];
  
 }
 

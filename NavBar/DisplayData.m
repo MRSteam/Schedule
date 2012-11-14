@@ -11,11 +11,16 @@
 #import "SettingsViewController.h"
 #import "MapViewController.h"
 
+#import "myAccessorValues.h"
+#import "ImgCache.h"
+
 @implementation DisplayData
 {
     NSMutableArray *array1;
     NSMutableArray *finishArray;
     Venues *myFoo;
+    NSOperationQueue *myQueue;
+
 }
 
 @synthesize webData,titleScrollView,loadIndicator;
@@ -56,6 +61,13 @@
 
 - (void)viewDidLoad
 {
+    
+
+    
+    
+    
+    
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
@@ -128,12 +140,9 @@
     array1 = [[NSMutableArray alloc] init];
     array1 = [[dict1 objectForKey:@"response"] objectForKey:@"venues"];
     
-    Venues *myNewObject = [[Venues alloc] init];
+    
+    //Venues *myNewObject = [[Venues alloc] init];
     finishArray = [[NSMutableArray alloc] init];
-    
-    
-    
-    
     
     for (int i=0; i< [array1 count]; i++) {
         if ([[[[[dict1 objectForKey:@"response"] objectForKey:@"venues"] objectAtIndex:i] objectForKey:@"categories"] count] != 0)
@@ -152,16 +161,57 @@
             
             myNewObject.checkins = [[[[[dict1 objectForKey:@"response"] objectForKey:@"venues"] objectAtIndex:i] objectForKey:@"stats"] objectForKey:@"checkinsCount"];
             
+            myNewObject.lat = [[[[[dict1 objectForKey:@"response"] objectForKey:@"venues"] objectAtIndex:i] objectForKey:@"location"] objectForKey:@"lat"];
+            
+            myNewObject.lng = [[[[[dict1 objectForKey:@"response"] objectForKey:@"venues"] objectAtIndex:i] objectForKey:@"location"] objectForKey:@"lng"];
+            
             //NSLog(@"! %@",myNewObject.image);
             
             [finishArray addObject:myNewObject];
+            
+/*
+            NSArray *keys = [NSArray arrayWithObjects:@"name", @"suffix",@"prefix",@"image",@"distance",@"checkins", nil];
+            NSArray *values = [NSArray arrayWithObjects:myNewObject.name, myNewObject.suffix,myNewObject.prefix,myNewObject.image,myNewObject.distance,myNewObject.checkins, nil];
+            NSDictionary *dict = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+            
+            NSString *error3=nil;
+            NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"MyVenues" ofType:@"plist"];
+            NSDictionary *plistDict = [NSDictionary dictionaryWithDictionary:
+                                       dict];
+            
+            NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
+                                                                           format:NSPropertyListXMLFormat_v1_0
+                                                                 errorDescription:&error3];
+            if(plistData) {
+                [plistData writeToFile:plistPath atomically:YES];
+            }
+ 
+            
+            //NSLog(@"error = %@", [error3 description]);
+            
+            //NSLog(@"!!! %@",dict);
+            
+            dict =[[NSDictionary alloc] initWithContentsOfFile:plistPath];
+            
+            */
+            
+             //NSLog(@"! %@",dict);
+            
         }
     }
+    //распарсили в веньюс
     
-    //NSString *str = [[NSString alloc] initWithData:webData encoding:NSUTF8StringEncoding];
-    //NSLog(@"%@", str);
+    [myAccessorValues myFinishArraySetter:finishArray];
     
     [self.myTableView reloadData];
+    
+
+    myQueue = [NSOperationQueue new];
+    myQueue.maxConcurrentOperationCount = 5;
+    
+    
+    if (finishArrayOld ==0) finishArrayOld = [finishArray count];
+    
 }
 
 - (void)viewDidUnload
@@ -175,6 +225,23 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+- (UIImage*)imageNamed:(NSString*)imageNamed cache:(BOOL)cache
+{
+    UIImage* retImage = nil;
+
+        retImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageNamed]]];
+        if (cache)
+        {
+            if (staticImageDictionary == nil)
+                staticImageDictionary = [NSMutableDictionary new];
+            
+            if (retImage != nil)
+                [staticImageDictionary setObject:retImage forKey:imageNamed];
+        }   
+    return retImage;
 }
 
 
@@ -197,7 +264,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    myFoo = [[Venues alloc] init];
+    //myFoo = [[Venues alloc] init];
     myFoo = [finishArray objectAtIndex:indexPath.row];
     //NSLog(@"%@",myFoo.distance);
     
@@ -215,14 +282,106 @@
     //cell.textLabel.text = myFoo.name;
     //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", myFoo.distance];
     
+    /*
+    [myQueue addOperationWithBlock:^{
+        myFoo = [finishArray objectAtIndex:indexPath.row];
+        NSURL *url = [NSURL URLWithString:myFoo.image];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            lblTemp3.image = [UIImage imageWithData:data];
+        }];
+    }];
+     */
     
-    NSURL *url = [NSURL URLWithString:myFoo.image];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImageView *subview = [[UIImageView alloc] initWithFrame:CGRectMake(5.0f, 5.0f, 32.0f, 32.0f)];
-    [subview setImage:[UIImage imageWithData:data]];
+    //dispatch_queue_t qLow = dispatch_get_main_queue();
+    //qLow = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
     
-    //[cell.contentView addSubview:subview];
-    lblTemp3.image = [UIImage imageWithData:data];
+    if (staticImageDictionaryKol == 0) staticImageDictionaryKol = [finishArray count];
+    
+    if ([staticImageDictionary count] <= staticImageDictionaryKol) //|| (finishArrayOld < [finishArray count]))
+    {
+
+       // if (finishArrayOld <= [finishArray count]) staticImageDictionaryKol = staticImageDictionaryKol + [finishArray count] - finishArrayOld;
+        
+            NSLog(@"%d - %d", [staticImageDictionary count], staticImageDictionaryKol);
+        
+    dispatch_queue_t qLow = dispatch_queue_create("myQ", DISPATCH_QUEUE_CONCURRENT);
+
+    dispatch_async(qLow, ^{
+        myFoo = [finishArray objectAtIndex:indexPath.row];
+        //NSURL *url = [NSURL URLWithString:myFoo.image];
+        //NSData *data = [NSData dataWithContentsOfURL:url];
+        
+        //UIImage *img = [UIImage imageWithData:data];
+        NSString *tmp = [NSString stringWithFormat:@"%@", myFoo.image];
+        
+        
+        if ([staticImageDictionary objectForKey:myFoo.image]!=nil)
+        {
+            staticImageDictionaryKol--;
+        }
+        
+        UIImage *ret =[self imageNamed:tmp cache:YES];
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            lblTemp3.image = ret;
+        });
+    });
+    }
+    else {
+        //загрузка картинок завершена, можно добавлять словарь картинок в плист для дальнейшего хранения
+        
+        //NSArray *keys = [NSArray arrayWithObjects:@"name", @"suffix",@"prefix",@"image",@"distance",@"checkins", nil];
+        //NSArray *values = [NSArray arrayWithObjects:, nil];
+        NSDictionary *dict = [NSDictionary dictionaryWithDictionary:staticImageDictionary];
+        
+        NSString *error3=nil;
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"MyVenues" ofType:@"plist"];
+        NSDictionary *plistDict = [NSDictionary dictionaryWithDictionary:
+                                   staticImageDictionary];
+        NSLog(@"%@", plistDict);
+        NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
+                                                                       format:NSPropertyListXMLFormat_v1_0
+                                                             errorDescription:&error3];
+        if(plistData) {
+            [plistData writeToFile:plistPath atomically:YES];
+            NSLog(@"YES BABY!");
+        }
+        else {NSLog(@"%@", error3);}
+        
+        
+        dict =[[NSDictionary alloc] initWithContentsOfFile:plistPath];
+        
+        NSLog(@"! %@",dict);
+        
+        myFoo = [finishArray objectAtIndex:indexPath.row];
+        if ([staticImageDictionary objectForKey:myFoo.image] == nil)
+        {
+            NSLog(@"Загрзили новую картинку для места: %@",myFoo.name);
+            //загрузим картинку для ново-появившегося места, и также надо обновить плист
+            NSString *tmp = [NSString stringWithFormat:@"%@", myFoo.image];
+            [self imageNamed:tmp cache:YES];
+            
+            
+            NSDictionary *dict = [NSDictionary dictionaryWithDictionary:staticImageDictionary];
+            
+            NSString *error3=nil;
+            NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"MyVenues" ofType:@"plist"];
+            NSDictionary *plistDict = [NSDictionary dictionaryWithDictionary:
+                                       dict];
+            //NSLog(@"%@", plistDict);
+            NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
+                                                                           format:NSPropertyListXMLFormat_v1_0
+                                                                 errorDescription:&error3];
+            if(plistData) {
+                [plistData writeToFile:plistPath atomically:YES];
+            }
+        }
+        lblTemp3.image = [staticImageDictionary objectForKey:myFoo.image];
+    }
+    
     
     return cell;
 }

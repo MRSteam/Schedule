@@ -36,6 +36,7 @@
 		1627A98A1625290800E7E7A5 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1627A9891625290800E7E7A5 /* ThirdViewController.xib */; };
 		1627A9D016253BA700E7E7A5 /* RaspViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1627A9CE16253BA700E7E7A5 /* RaspViewController.m */; };
 		1627A9D116253BA700E7E7A5 /* RaspViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1627A9CF16253BA700E7E7A5 /* RaspViewController.xib */; };
+		1673717A1653C19D004343A9 /* ImgCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 167371791653C19D004343A9 /* ImgCache.m */; };
 		16C76ADE163AAB9F003277BA /* NavigationViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76ADC163AAB9F003277BA /* NavigationViewController2.m */; };
 		16C76ADF163AAB9F003277BA /* NavigationViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C76ADD163AAB9F003277BA /* NavigationViewController2.xib */; };
 		16C76AE3163AAF80003277BA /* PairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C76AE1163AAF80003277BA /* PairViewController.m */; };
@@ -104,6 +105,8 @@
 		1627A9CD16253BA700E7E7A5 /* RaspViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaspViewController.h; sourceTree = "<group>"; };
 		1627A9CE16253BA700E7E7A5 /* RaspViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaspViewController.m; sourceTree = "<group>"; };
 		1627A9CF16253BA700E7E7A5 /* RaspViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RaspViewController.xib; sourceTree = "<group>"; };
+		167371781653C19D004343A9 /* ImgCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImgCache.h; sourceTree = "<group>"; };
+		167371791653C19D004343A9 /* ImgCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImgCache.m; sourceTree = "<group>"; };
 		16C76ADB163AAB9F003277BA /* NavigationViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController2.h; sourceTree = "<group>"; };
 		16C76ADC163AAB9F003277BA /* NavigationViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController2.m; sourceTree = "<group>"; };
 		16C76ADD163AAB9F003277BA /* NavigationViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationViewController2.xib; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				1626A9591646EA7400C3FA63 /* Venues.m */,
 				16C76B741641AA2A003277BA /* MyCLController.h */,
 				16C76B751641AA2A003277BA /* MyCLController.m */,
+				167371781653C19D004343A9 /* ImgCache.h */,
+				167371791653C19D004343A9 /* ImgCache.m */,
 				16C76B7A1642EB7E003277BA /* DisplayData.h */,
 				16C76B7B1642EB7F003277BA /* DisplayData.m */,
 				16C76B7C1642EB7F003277BA /* DisplayData.xib */,
@@ -256,12 +261,12 @@
 			isa = PBXGroup;
 			children = (
 				16C76AF6163B4425003277BA /* stas.jpg */,
+				1627A93716235BFF00E7E7A5 /* NavBar-Info.plist */,
 				1627A97616236CC600E7E7A5 /* Monday.jpg */,
 				1627A97716236CC600E7E7A5 /* Thuesday.jpg */,
 				1627A97816236CC600E7E7A5 /* Wednesday.jpg */,
 				1627A97916236CC600E7E7A5 /* Thusday.jpg */,
 				1627A97A16236CC600E7E7A5 /* Friday.jpg */,
-				1627A93716235BFF00E7E7A5 /* NavBar-Info.plist */,
 				1627A93816235BFF00E7E7A5 /* InfoPlist.strings */,
 				1627A93B16235BFF00E7E7A5 /* main.m */,
 				1627A93D16235BFF00E7E7A5 /* NavBar-Prefix.pch */,
@@ -404,6 +409,7 @@
 				1626A95A1646EA7400C3FA63 /* Venues.m in Sources */,
 				16E5A2BD164847CA006CDEE3 /* MapViewController.m in Sources */,
 				16E5A2C316485238006CDEE3 /* MapPoint.m in Sources */,
+				1673717A1653C19D004343A9 /* ImgCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,9 +500,11 @@
 		1627A96416235BFF00E7E7A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NavBar/NavBar-Prefix.pch";
 				INFOPLIST_FILE = "NavBar/NavBar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/NavBar\"",
@@ -510,9 +518,11 @@
 		1627A96516235BFF00E7E7A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NavBar/NavBar-Prefix.pch";
 				INFOPLIST_FILE = "NavBar/NavBar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/NavBar\"",

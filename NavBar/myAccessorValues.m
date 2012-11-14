@@ -17,6 +17,7 @@ static NSString *myAuditName;
 static NSString *myPairPrepod;
 static NSString *myDayName;
 static UIImage *myPairImg;
+static NSArray *myFinishArray;
 
  
 /*- (void)myPairNameSet:(NSString *)myPairName
@@ -51,6 +52,11 @@ static UIImage *myPairImg;
     myPairImg=_myPairImg;
 }
 
++(void)myFinishArraySetter:(NSArray *)_myFinishArray
+{
+    myFinishArray=_myFinishArray;
+}
+
 
 
 +(NSString *)myPairNameAccessor
@@ -77,4 +83,11 @@ static UIImage *myPairImg;
 +(UIImage*)myPairImgAccessor {
     return myPairImg;
 }
+
++(NSString*)myFinishArrayAccessor {
+    return myFinishArray;
+}
+
+
+
 @end

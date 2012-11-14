@@ -9,7 +9,7 @@
 #import "Venues.h"
 
 @implementation Venues
-@synthesize name, suffix, prefix, image, distance;
+@synthesize name, suffix, prefix, image, distance, checkins, lat, lng;
 
 
 @end

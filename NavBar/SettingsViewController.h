@@ -15,7 +15,7 @@
 
 @interface SettingsViewController : UIViewController
 <MyCLControllerDelegate>
-{
+{    
     sqlite3 *groupDB;
     NSString *databasePath;
     MyCLController *locationController;
@@ -24,6 +24,9 @@
     DisplayData *displayData;
 }
 
+
+
+@property (strong, nonatomic) IBOutlet UIButton *button;
 @property (strong, nonatomic) IBOutlet UITextField *yourGroupNumber;
 - (IBAction)yourGroupNumberText:(id)sender;
 - (IBAction)doGeoLocation:(id)sender;
@@ -37,6 +40,6 @@
 - (void)locationUpdate:(CLLocation *)location;
 - (void)locationError:(NSError *)error;
 - (IBAction)displayData:(id)sender;
-@property (strong, nonatomic) IBOutlet UIButton *button;
+
 
 @end

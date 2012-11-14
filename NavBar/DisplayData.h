@@ -18,6 +18,8 @@
     UIActivityIndicatorView* loadIndicator;
 }
 
+- (UIImage*)imageNamed:(NSString*)imageNamed cache:(BOOL)cache;
+
 @property(nonatomic, retain) NSMutableData *webData;
 @property(nonatomic,retain) IBOutlet    UIScrollView *titleScrollView;
 @property (nonatomic, retain) UIActivityIndicatorView *loadIndicator;

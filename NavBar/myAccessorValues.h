@@ -23,12 +23,17 @@
 +(NSString*)myPairPrepodAccessor;
 +(NSString*)myDayNameAccessor;
 +(UIImage*)myPairImgAccessor;
+
 +(void)myPairNameSetter:(NSString *)_myPairName;
 +(void)myPairTimeSetter:(NSString *)_myPairTime;
 +(void)myAuditNameSetter:(NSString *)_myAuditName;
 +(void)myPairPrepodSetter:(NSString *)_myPairPrepod;
 +(void)myDayNameSetter:(NSString *)_myDayName;
 +(void)myPairImgSetter:(UIImage *)_myPairImg;
+
++(NSArray*)myFinishArray;
++(void)myFinishArraySetter:(NSArray *)_myFinishArray;
++(NSString*)myFinishArrayAccessor;
 
 //@property (nonatomic, strong) NSString *myPairName, *myPairTime, *myAuditName, *myPairPrepod, *myDayName, *myPairImg;
 
@@ -41,3 +46,7 @@ typedef enum {first = 10, second = 20, third = 30} EnumName;
 
 //если не писать свои сеттеры и геттеры то придется передавать объект нашего класса, а так передавать ничего не надо
 
+
+NSMutableDictionary *staticImageDictionary;
+int staticImageDictionaryKol;
+int finishArrayOld;

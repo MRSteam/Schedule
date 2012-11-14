@@ -18,6 +18,8 @@
 
 #import "GroupMy.h"
 
+#import "myAccessorValues.h"
+
 @implementation AppDelegate
 
 @synthesize tabBarController = _tabBarController;
@@ -80,7 +82,9 @@
     
     viewController3.listContent = listContent1;*/
     
-
+    staticImageDictionaryKol = 0;
+    finishArrayOld = 0;
+    
     return YES;
 }
 

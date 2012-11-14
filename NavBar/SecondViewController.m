@@ -148,7 +148,7 @@ int groupMy = 0;
                 
                 myLabel.hidden=YES;
                 yourGroupNumber.hidden=YES;
-                myButton.hidden=YES;
+                //myButton.hidden=YES;
                 
                 NSString *querySQL = [NSString stringWithFormat: @"SELECT * FROM MAIN WHERE num=\"%@\" and day=\"%d\"",numberField,stringInt];
                 const char *query_stmt = [querySQL UTF8String];

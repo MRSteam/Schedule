@@ -16,8 +16,10 @@
     NSString *image;
     NSString *distance;
     NSString *checkins;
+    NSString *lat;
+    NSString *lng;
 }
 
-@property (nonatomic, retain) NSString *name, *suffix, *prefix, *image, *distance, *checkins;
+@property (nonatomic, retain) NSString *name, *suffix, *prefix, *image, *distance, *checkins, *lat, *lng;
 
 @end
